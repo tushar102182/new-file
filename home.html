@@ -65,11 +65,11 @@
                     <img src="./assets/opt-2.png" alt="">
                     <p>Cashout </p>
                 </div>
-                <div class="btn py-4 rounded-lg  h-max btn-primary btn-soft flex-col ">
+                <div onclick="showOnly('transfer')" class="btn py-4 rounded-lg  h-max btn-primary btn-soft flex-col ">
                     <img src="./assets/opt-3.png" alt="">
                     <p>Transfer Money </p>
                 </div>
-                <div class="btn py-4 rounded-lg h-max btn-primary btn-soft flex-col ">
+                <div onclick="showOnly('bonus')" class="btn py-4 rounded-lg h-max btn-primary btn-soft flex-col ">
                     <img src="./assets/opt-4.png" alt="">
                     <p>Get Bonus </p>
                 </div>
@@ -151,9 +151,57 @@
 
  </div>
  </section>
+ <!-- transfer -->
+  <section id="transfer" class=" hidden mx-auto w-11/12 p-5">
+            <h2 class="text-2xl font-medium">
+                Transfer Money
+            </h2>
+            <div class="card bg-base-100 w-full  shadow mt-[20px] ">
+                <div class="card-body ">
+                    <fieldset class="fieldset">
+                        <label class="label text-black font-medium">User Account Number </label>
+                        <input id="transfer-number" minlength="11" maxlength="11 " type="tel" class="input rounded-full"
+                            placeholder="Enter agent number" />
+                        <label class="label text-black font-medium">Amount </label>
+                        <input id="transfer-amount" type="number" class="input rounded-full"
+                            placeholder="Enter amount to transfer" />
+                        <label class="label text-black font-medium">Pin Number</label>
+                        <input id="transfer-pin" type="password" minlength="4" maxlength="4" class="input rounded-full"
+                            placeholder="Enter 4 digit Pin" />
+
+                        <button id="transfer-btn" class="btn btn-primary rounded-full  mt-4">Send Money </button>
+                    </fieldset>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Bonus Section -->
+  <section id="bonus" class=" hidden mx-auto w-11/12 p-5">
+            <h2 class="text-2xl font-medium">
+                Get Bonus
+            </h2>
+            <div class="card bg-base-100 w-full  shadow mt-[20px] ">
+                <div class="card-body ">
+                    <fieldset class="fieldset">
+                       
+                        <label class="label text-black font-medium">Enter Bonus Coupon </label>
+                        <input id="bonus-coupon" type="number" class="input rounded-full"
+                            placeholder="Enter your coupon " />
+                       
+
+                        <button type="button" id="bonus-btn" class="btn btn-primary rounded-full  mt-4">Get Bonus </button>
+                    </fieldset>
+                </div>
+            </div>
+
+        </section>
+
 
     </div>
     <script src="script/functions.js"></script>
+    <script src="script/getbonus.js"></script>
+    <script src="script/transfer.js"></script>
     <script src="script/addmoney.js"></script>
     <script src="script/cashout.js"></script>
 </body>
